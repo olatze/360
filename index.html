@@ -1,79 +1,61 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.76">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;360&amp;deg; Image Gallery&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="360&amp;deg; Image Gallery - A-Frame"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://aframe.io/releases/0.5.0/aframe.min.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://npmcdn.com/aframe-animation-component@3.0.1"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://npmcdn.com/aframe-event-set-component@3.0.1"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://npmcdn.com/aframe-layout-component@3.0.1"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://npmcdn.com/aframe-template-component@3.1.1"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="components/set-image.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a-scene&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-assets&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="city" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/33008352661_b41d167508_k.jpg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="city-thumb" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/thumb-ciencia.jpg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="cubes-thumb" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/thumb-moda.jpg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="sechelt-thumb" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/thumb-acuarium.jpg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"&gt;&lt;/audio&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="cubes" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/30876470680_752bbc4b26_k.jpg"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="sechelt" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/31015980151_63215a1600_k.jpg"&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Image link template to be reused. --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;script id="link" type="text/html"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;a-entity class="link"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>geometry="primitive: plane; height: 1; width: 1"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>material="shader: flat; src: ${thumb}"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>event-set__1="_event: mousedown; scale: 1 1 1"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>event-set__2="_event: mouseup; scale: 1.2 1.2 1"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>event-set__3="_event: mouseenter; scale: 1.2 1.2 1"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>event-set__4="_event: mouseleave; scale: 1 1 1"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>set-image="on: click; target: #image-360; src: ${src}"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>sound="on: click; src: #click-sound"&gt;&lt;/a-entity&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a-assets&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- 360-degree image. --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-sky id="image-360" radius="10" src="#city"&gt;&lt;/a-sky&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Image links. --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"&gt;&lt;/a-entity&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"&gt;&lt;/a-entity&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"&gt;&lt;/a-entity&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a-entity&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;!-- Camera + cursor. --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-entity camera look-controls&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a-cursor id="cursor"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>event-set__1="_event: mouseenter; color: springgreen"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>event-set__2="_event: mouseleave; color: black"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>fuse="true"</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>raycaster="objects: .link"&gt;&lt;/a-cursor&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a-entity&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/a-scene&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="components/set-image.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="city" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/33008352661_b41d167508_k.jpg">
+        <img id="city-thumb" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/thumb-ciencia.jpg">
+        <img id="cubes-thumb" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/thumb-moda.jpg">
+        <img id="sechelt-thumb" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/thumb-acuarium.jpg">
+        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+        <img id="cubes" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/30876470680_752bbc4b26_k.jpg">
+        <img id="sechelt" crossorigin="anonymous" src="https://raw.githubusercontent.com/olatze/360/master/31015980151_63215a1600_k.jpg">
+
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+      </a-assets>
+
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="10" src="#city"></a-sky>
+
+      <!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
+      </a-entity>
+
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link"></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
 </html>
